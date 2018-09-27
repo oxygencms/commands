@@ -13,13 +13,15 @@ class OxygenCommandsServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-//        if ($this->app->runningInConsole()) {
-//            $this->commands([
-//                FooCommand::class,
-//                BarCommand::class,
-//            ]);
-//        }
-        info('dfsgdsfg');
+        if ($this->app->runningInConsole()) {
+            $this->commands([
+                OxyAdminControllerMakeCommand::class,
+                OxyAdminRequestMakeCommand::class,
+                OxyControllerMakeCommand::class,
+                OxyPolicyMakeCommand::class,
+                OxyMakeCommand::class,
+            ]);
+        }
     }
 
     /**

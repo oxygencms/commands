@@ -1,0 +1,28 @@
+{
+    "name": "oxygencms/commands",
+    "description": "Oxygen cms crud commands",
+    "authors": [
+        {
+            "name": "Pavel Pavlov",
+            "email": "pavlovp@icloud.com"
+        }
+    ],
+    "license": "MIT",
+    "require": {
+        "php": ">=7.0"
+    },
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "Oxygencms\\Commands\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Oxygencms\\Commands\\OxygenCommandsServiceProvider"
+            ]
+        }
+    }
+}
+

@@ -1,0 +1,72 @@
+<?php
+
+namespace DummyNamespace;
+
+use NamespacedDummyUserModel;
+use Illuminate\Auth\Access\HandlesAuthorization;
+
+class DummyClass extends BasePolicy
+{
+    use HandlesAuthorization;
+
+    /**
+     * Determine whether the user can view the DocDummyModel.
+     *
+     * @param  \NamespacedDummyUserModel  $user
+     *
+     * @return mixed
+     */
+    public function index(DummyUser $user)
+    {
+        if ($user->can('see_dummyPluralModel') || $user->can('manage_dummyPluralModel')) {
+            return true;
+        }
+
+        return false;
+    }
+
+    /**
+     * Determine whether the user can create DocDummyPluralModel.
+     *
+     * @param  \NamespacedDummyUserModel  $user
+     * @return mixed
+     */
+    public function create(DummyUser $user)
+    {
+        if ($user->can('create_dummyPluralModel') || $user->can('manage_dummyPluralModel')) {
+            return true;
+        }
+
+        return false;
+    }
+
+    /**
+     * Determine whether the user can update the DocDummyModel.
+     *
+     * @param  \NamespacedDummyUserModel  $user
+     * @return mixed
+     */
+    public function update(DummyUser $user)
+    {
+        if ($user->can('update_dummyPluralModel') || $user->can('manage_dummyPluralModel')) {
+            return true;
+        }
+
+        return false;
+    }
+
+    /**
+     * Determine whether the user can delete the DocDummyModel.
+     *
+     * @param  \NamespacedDummyUserModel  $user
+     * @return mixed
+     */
+    public function delete(DummyUser $user)
+    {
+        if ($user->can('delete_dummyPluralModel') || $user->can('manage_dummyPluralModel')) {
+            return true;
+        }
+
+        return false;
+    }
+}

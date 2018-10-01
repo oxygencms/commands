@@ -20,7 +20,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Oxygencms\\Commands\\OxygenCommandsServiceProvider"
+                "Oxygencms\\Commands\\CommandServiceProvider"
             ]
         }
     }

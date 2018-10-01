@@ -4,7 +4,7 @@ namespace Oxygencms\Commands;
 
 use Illuminate\Support\ServiceProvider;
 
-class OxygenCommandsServiceProvider extends ServiceProvider
+class CommandServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap services.

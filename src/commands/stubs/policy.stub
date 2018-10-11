@@ -3,6 +3,7 @@
 namespace DummyNamespace;
 
 use NamespacedDummyUserModel;
+use Oxygencms\Core\Policies\BasePolicy;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
 class DummyClass extends BasePolicy

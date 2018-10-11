@@ -23,7 +23,7 @@ class DummyClass extends Controller
 
         JavaScript::put(compact('models'));
 
-        return view('admin.DummyModelVarPlural.index');
+        return view('oxygencms::admin.DummyModelVarPlural.index');
     }
 
     /**
@@ -36,7 +36,7 @@ class DummyClass extends Controller
     {
         $this->authorize('create', DummyModelClass::class);
 
-        return view('admin.DummyModelVarPlural.create', ['DummyModelVariable' => null]);
+        return view('oxygencms::admin.DummyModelVarPlural.create', ['DummyModelVariable' => null]);
     }
 
     /**
@@ -66,7 +66,7 @@ class DummyClass extends Controller
      */
     public function show(DummyModelClass $DummyModelVariable)
     {
-        return view('admin.DummyModelVarPlural.show', compact('DummyModelVariable'));
+        return view('oxygencms::admin.DummyModelVarPlural.show', compact('DummyModelVariable'));
     }
 
     /**
@@ -81,7 +81,7 @@ class DummyClass extends Controller
     {
         $this->authorize('update', DummyModelClass::class);
 
-        return view('admin.DummyModelVarPlural.edit', compact('DummyModelVariable'));
+        return view('oxygencms::admin.DummyModelVarPlural.edit', compact('DummyModelVariable'));
     }
 
     /**

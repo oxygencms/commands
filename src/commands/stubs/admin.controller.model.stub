@@ -55,7 +55,7 @@ class DummyClass extends Controller
 
         notification("$DummyModelVariable->model_name successfully created.");
 
-        return redirect()->route('DummyModelVariable.index');
+        return redirect()->route('admin.DummyModelVariable.index');
     }
 
     /**
@@ -101,7 +101,7 @@ class DummyClass extends Controller
 
         notification("$DummyModelVariable->model_name successfully updated.");
 
-        return redirect()->back();
+        return redirect()->route('admin.DummyModelVariable.index');
     }
 
     /**

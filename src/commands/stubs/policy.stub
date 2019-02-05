@@ -19,7 +19,7 @@ class DummyClass extends BasePolicy
      */
     public function index(DummyUser $user)
     {
-        if ($user->can('see_dummyPluralModel') || $user->can('manage_dummyPluralModel')) {
+        if ($user->can('view_dummyPluralModel') || $user->can('manage_dummyPluralModel')) {
             return true;
         }
 
@@ -34,7 +34,7 @@ class DummyClass extends BasePolicy
      */
     public function create(DummyUser $user)
     {
-        if ($user->can('create_dummyPluralModel') || $user->can('manage_dummyPluralModel')) {
+        if ($user->can('create_dummyModel') || $user->can('manage_dummyPluralModel')) {
             return true;
         }
 
@@ -49,7 +49,7 @@ class DummyClass extends BasePolicy
      */
     public function update(DummyUser $user)
     {
-        if ($user->can('update_dummyPluralModel') || $user->can('manage_dummyPluralModel')) {
+        if ($user->can('update_dummyModel') || $user->can('manage_dummyPluralModel')) {
             return true;
         }
 
@@ -64,7 +64,7 @@ class DummyClass extends BasePolicy
      */
     public function delete(DummyUser $user)
     {
-        if ($user->can('delete_dummyPluralModel') || $user->can('manage_dummyPluralModel')) {
+        if ($user->can('delete_dummyModel') || $user->can('manage_dummyPluralModel')) {
             return true;
         }
 

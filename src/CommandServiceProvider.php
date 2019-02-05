@@ -22,6 +22,10 @@ class CommandServiceProvider extends ServiceProvider
                 OxyMakeCommand::class,
             ]);
         }
+
+        $this->publishes([
+            __DIR__ . '/commands' => app_path('console/commands/OxyCommands'),
+        ], 'commands');
     }
 
     /**

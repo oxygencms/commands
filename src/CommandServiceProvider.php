@@ -24,7 +24,7 @@ class CommandServiceProvider extends ServiceProvider
         }
 
         $this->publishes([
-            __DIR__ . '/commands' => app_path('console/commands/OxyCommands'),
+            __DIR__ . '/commands' => app_path('Console/commands/OxyCommands'),
         ], 'commands');
     }
 

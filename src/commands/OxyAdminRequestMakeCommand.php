@@ -56,8 +56,9 @@ class OxyAdminRequestMakeCommand extends GeneratorCommand
      *
      * Remove the base controller import if we are already in base namespace.
      *
-     * @param  string  $name
+     * @param string $name
      * @return string
+     * @throws \Illuminate\Contracts\Filesystem\FileNotFoundException
      */
     protected function buildClass($name)
     {
@@ -84,7 +85,7 @@ class OxyAdminRequestMakeCommand extends GeneratorCommand
             'DummyFullModelClass' => $modelClass,
             'DummyModelClass' => class_basename($modelClass),
             'DummyModelVariable' => lcfirst(class_basename($modelClass)),
-            'DummyModelVarPlural' => str_plural(lcfirst(class_basename($modelClass))),
+            'DummyModelVarPlural' => Str::plural(lcfirst(class_basename($modelClass))),
         ]);
     }
 

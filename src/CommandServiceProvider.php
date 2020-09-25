@@ -3,6 +3,11 @@
 namespace Oxygencms\Commands;
 
 use Illuminate\Support\ServiceProvider;
+use Oxygencms\Commands\Commands\OxyAdminControllerMakeCommand;
+use Oxygencms\Commands\Commands\OxyAdminRequestMakeCommand;
+use Oxygencms\Commands\Commands\OxyControllerMakeCommand;
+use Oxygencms\Commands\Commands\OxyMakeCommand;
+use Oxygencms\Commands\Commands\OxyPolicyMakeCommand;
 
 class CommandServiceProvider extends ServiceProvider
 {
@@ -24,7 +29,7 @@ class CommandServiceProvider extends ServiceProvider
         }
 
         $this->publishes([
-            __DIR__ . '/commands' => app_path('Console/commands/OxyCommands'),
+            __DIR__ . '/commands' => app_path('Console/Commands/OxyCommands'),
         ], 'commands');
     }
 

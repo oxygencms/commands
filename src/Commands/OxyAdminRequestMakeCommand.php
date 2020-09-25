@@ -1,6 +1,6 @@
 <?php
 
-namespace Oxygencms\Commands;
+namespace Oxygencms\Commands\Commands;
 
 use Illuminate\Console\GeneratorCommand;
 use Illuminate\Support\Str;
